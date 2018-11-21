@@ -248,8 +248,8 @@
         // .fromTo("#stripe1", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
         // .fromTo("#stripe2", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
         
-        .fromTo("#video", 1.2, {height: '500px', transition: '1s'}, {height: '370px', ease: Linear.easeNone})
-        .fromTo(".stripes", 1.2, {top: "500px", transition: '1s'}, {top: "0px", ease: Linear.easeNone})
+        .fromTo("#video", 1.2, {height: '500px', transition: '0.8s'}, {height: '370px', ease: Linear.easeNone})
+        .fromTo(".stripes", 1.2, {top: "500px", transition: '0.8s'}, {top: "0px", ease: Linear.easeNone})
         .to("#anchor-spacer", 1, {height: '0', ease: Linear.easeNone})
         .fromTo("#container-main", 1.2, {opacity: 1, transition: '1s'}, {opacity: 0.5, ease: Linear.easeNone})
 
