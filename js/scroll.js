@@ -11,16 +11,16 @@ var yposCurrent;
 
     var isAnimating  = false;
 
-    var count = 0; // current block index
-    var oldCount = count; // previous block index
+    var currentBlockIndex = 0; // current block index
+    var previousBlockIndex = currentBlockIndex; // previous block index
 
     // getting block index
     var sectionNumber = function() {
         for (let i = 0; i < offsets.length; i++) {
             if (window.pageYOffset + 100 >= offsets[offsets.length - 1]) {
-                count = offsets.length - 1;
+                currentBlockIndex = offsets.length - 1;
             } else if (window.pageYOffset + 100 >= offsets[i] && window.pageYOffset + 100 < offsets[i + 1]) {
-                count = i;
+                currentBlockIndex = i;
             }
         }
     };
@@ -38,7 +38,7 @@ var yposCurrent;
         });
         
         sectionNumber();
-        buttons[count].classList.add('line-bottom');
+        buttons[currentBlockIndex].classList.add('line-bottom');
     
     }, 3000);
     // Array.from(sections).forEach((elem, i) => {
@@ -64,27 +64,27 @@ var yposCurrent;
         // console.log('пиздык');
 
         if (window.pageYOffset + 100 >= offsets[offsets.length]) {
-            for (let j = (buttons[oldCount].classList.length - 1); j >= 1; j--) {
-                buttons[oldCount].classList.remove(buttons[oldCount].classList[j]);
+            for (let j = (buttons[previousBlockIndex].classList.length - 1); j >= 1; j--) {
+                buttons[previousBlockIndex].classList.remove(buttons[previousBlockIndex].classList[j]);
             }
-            buttons[count].classList.add('line-bottom');
-        } else if (count > oldCount) {
-            buttons[oldCount].classList.add('none-active-line-bottom');
-            for (let j = (buttons[count].classList.length - 1); j >= 1; j--) {
-                buttons[count].classList.remove(buttons[count].classList[j]);
+            buttons[currentBlockIndex].classList.add('line-bottom');
+        } else if (currentBlockIndex > previousBlockIndex) {
+            buttons[previousBlockIndex].classList.add('none-active-line-bottom');
+            for (let j = (buttons[currentBlockIndex].classList.length - 1); j >= 1; j--) {
+                buttons[currentBlockIndex].classList.remove(buttons[currentBlockIndex].classList[j]);
             }
-            buttons[count].classList.add('line-bottom');
-        } else if (count < oldCount) {
-            for (let j = (buttons[count].classList.length - 1); j >= 1; j--) {
-                buttons[count].classList.remove(buttons[count].classList[j]);
+            buttons[currentBlockIndex].classList.add('line-bottom');
+        } else if (currentBlockIndex < previousBlockIndex) {
+            for (let j = (buttons[currentBlockIndex].classList.length - 1); j >= 1; j--) {
+                buttons[currentBlockIndex].classList.remove(buttons[currentBlockIndex].classList[j]);
             }
-            for (let j = (buttons[oldCount].classList.length - 1); j >= 1; j--) {
-                buttons[oldCount].classList.remove(buttons[oldCount].classList[j]);
+            for (let j = (buttons[previousBlockIndex].classList.length - 1); j >= 1; j--) {
+                buttons[previousBlockIndex].classList.remove(buttons[previousBlockIndex].classList[j]);
             }              
-            buttons[count].classList.add('line-top');         
+            buttons[currentBlockIndex].classList.add('line-top');         
         }
 
-        oldCount = count;
+        previousBlockIndex = currentBlockIndex;
     });
 
     window.addEventListener('wheel', (evt) => {
