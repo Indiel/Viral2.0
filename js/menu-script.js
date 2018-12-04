@@ -2,6 +2,25 @@
 
 (function () {
 
+    var projectButton = document.querySelector('.main-nav__start-project-button');
+    var briefButton = document.querySelector('.brief__button');
+    var formCancelButton = document.querySelector('.discuss-form__cancel');
+
+    var discussProject = document.querySelector('.modal__discuss-project');
+
+    projectButton.addEventListener('click', () => {
+        discussProject.classList.toggle('modal__discuss-project--active');
+    });
+
+    briefButton.addEventListener('click', () => {
+        discussProject.classList.toggle('modal__discuss-project--active');
+    });
+
+    formCancelButton.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        discussProject.classList.toggle('modal__discuss-project--active');
+    });
+
     var menuButton = document.querySelector('.menu-button');
 
     var mainNav = document.querySelector('.main-nav__wrapper');

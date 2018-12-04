@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     
     <link rel="stylesheet" href="css/media.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
     
     <title>Viral</title>
 </head>
@@ -535,39 +535,42 @@
     </footer>
 
     <section class="modal modal__discuss-project">
-        <h2 class="visually-hidden">Обсудить проект</h2>
+        <h2 class="discuss-project__title">Обсудить проект</h2>
         <form class="discuss-project__form discuss-form" action="#" method="post">
-            <select name="service" class="discuss-form__service">
-                <option value="site-development">Разработка сайта</option>
-                <option value="design">Дизайн</option>
-                <option value="marketing">Маркетинг</option>						
-            </select>
-            <p>
+            <p class="discuss-form__p">
+                <select name="service" class="discuss-form__service">
+                    <option value="site-development">Разработка сайта</option>
+                    <option value="design">Дизайн</option>
+                    <option value="marketing">Маркетинг</option>						
+                </select>
+            </p>
+            <p class="discuss-form__p">
                 <label class="visually-hidden" for="discuss-form__name">Имя</label>
                 <input id="discuss-form__name" type="text" name="name" placeholder="Ваше имя">
             </p>
-            <p>
+            <p class="discuss-form__p">
                 <label class="visually-hidden" for="discuss-form__phone">Телефон</label>
                 <input id="discuss-form__phone" type="tel" name="phone" placeholder="Введите номер телефона*">
             </p>
-            <p>
+            <p class="discuss-form__p">
                 <label class="visually-hidden" for="discuss-form__mail">Почта</label>
                 <input id="discuss-form__mail" type="email" name="mail" placeholder="Email*">
             </p>
-            <p>
+            <p class="discuss-form__p">
                 <label class="visually-hidden" for="discuss-form__text">Сообщение</label>
-                <textarea id="discuss-form__text" name="text" placeholder="Ваше сообщение"></textarea>
+                <textarea class="discuss-form__text" id="discuss-form__text" name="text" placeholder="Ваше сообщение"></textarea>
             </p>
-
-            <button class="button discuss-form__order" type="submit">Заказать</button>
-            <button class="button discuss-form__close">Отмена</button>
+            <p class="discuss-form__p-buttons">
+                <button class="button discuss-form__order" type="submit">Заказать</button>
+                <button class="button discuss-form__cancel">Отмена</button>
+            </p>
         </form>
     </section>
 
     <script type="text/javascript" src="js/jquery.js"></script>
 
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <script src="js/jquery-ui.js"></script>
 
     <script>
         $( function() {

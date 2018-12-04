@@ -1645,27 +1645,23 @@ ul {
     height: auto;
 }
 
+
+
 .modal__discuss-project  {
     text-transform: uppercase;
 
     position: fixed;
     top: 0;
     left: 0;
-    /* top: 50px;
-    left: 40px; */
-    /* top: 50%;*/
     left: 50%;
     transform: translateX(-50%);
     
-    /* width: 100vw;
-    height: 100vh;
-    transform: scale(0); */
-    /* width: 0;  */
     /* height: 100vh; */
     height: 0;
     width: 100vw;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -1679,7 +1675,6 @@ ul {
 }
 
 .modal__discuss-project--active {
-
     height: 100vh;  
     /* transform: translate(-50%, -50%); */
 }
@@ -1700,4 +1695,57 @@ ul {
     animation: 1s infinite noise;
     
     pointer-events: none;
+}
+
+.discuss-project__title {
+    margin-bottom: 25px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.discuss-form__p {
+    width: 345px;
+}
+
+input,
+textarea,
+select {
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    color: #b3b3b3;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+
+    width: 100%;
+}
+
+.discuss-form__text {
+    width: 345px;
+    margin-bottom: 20px;
+}
+
+.discuss-form__p-buttons {
+    width: 345px;
+    display: flex;
+    justify-content: center;
+}
+
+.discuss-form__order,
+.discuss-form__cancel {
+    color: #fff;
+    border-color: #fff;
+}
+
+.discuss-form__cancel {
+    min-width: 120px;
+    /* width: 140px;
+    padding: 0; */
+    border: none;
+}
+
+.discuss-form__cancel:hover {
+    border: none;
+    background-color: transparent;
 }
