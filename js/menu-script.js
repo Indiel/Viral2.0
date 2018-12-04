@@ -28,6 +28,7 @@
     var mainLang = document.querySelector('.lang-list__link');
     var navItem = document.querySelectorAll('.nav-list__item');
     var socialList = document.querySelector('.fixed__social-list');
+    var fixedCall = document.querySelector('.fixed__call');
 
     menuButton.addEventListener('click', () => {
         var timeMenu;
@@ -47,6 +48,7 @@
             mainButton.classList.toggle('main-nav__start-project-button--active');
             mainLang.classList.toggle('lang-list__link--active');
             socialList.classList.toggle('fixed__social-list--active');
+            fixedCall.classList.toggle('menu');
         }, timeMenu);
 
         Array.from(navItem).forEach((elem) => {
