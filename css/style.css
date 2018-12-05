@@ -1577,16 +1577,10 @@ ul {
 
 .certificates {
     padding-bottom: 100px;
-    padding-top: 100px;
     /* max-width: 1110px; */
 
     position: relative;
     z-index: 2;
-}
-
-.clients {
-    padding-bottom: 80px;
-    /* max-width: 1110px; */
 }
 
 .clients__list {
@@ -1621,7 +1615,7 @@ ul {
 .brief {
     position: relative;
     display: block;
-    /* margin: 0 auto; */
+    margin: 100px auto;
     padding: 135px 0 120px 0;
     /* max-width: 1170px; */
 
@@ -1796,4 +1790,119 @@ select {
 .discuss-form__cancel:hover {
     border: none;
     background-color: transparent;
+}
+
+
+
+.container__main-design {
+    padding-top: 100px;
+}
+
+.main-design {
+    padding: 0 30px;
+    margin-bottom: 120px;
+    min-height: 500px;
+    background-image: url(../img/design-bg.png);
+    background-size: cover;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-transform: uppercase;
+    text-align: left;
+    color: #fff;
+}
+
+.main-design__title {
+    width: 60%;
+    font-size: 36px;
+}
+
+.main-design__title-mini {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.main-design__services-list {
+    width: 40%;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.main-design__service-item {
+    position: relative;
+
+    padding: 15px 0 15px 15px;
+    /* margin: 10px 0; */
+    /* height: 30px; */
+}
+
+.main-design__service-item::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    width: 6px;
+    height: 6px;
+
+    background-color: #cc0000;
+}
+
+.services-more__list {
+    margin-bottom: 80px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    text-align: left;
+}
+
+.services-more__item {
+    width: 370px;
+    margin-bottom: 50px;
+}
+
+.services-more__title {
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.services-more__description {
+    font-size: 14px;
+}
+
+.services-more__container {
+    position: relative;
+    height: 12px;
+}
+
+.services-more__arrow1 {
+    width: 165px;
+}
+
+.services-more__arrow2 {
+    left: 160px;
+}
+
+.web-design {
+    padding-bottom: 70px;
+}
+
+.web-design__text-container::before {
+    content: url(../img/lines.png);
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+}
+
+.web-design__text-container::after {
+    content: url(../img/points.png);
+    position: absolute;
+    top: -50px;
+    right: 0;
 }
